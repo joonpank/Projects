@@ -29,8 +29,8 @@ def take_step() -> str():
 def plot_journey(x_data, y_data, time) -> None:
     home_x = [100]
     home_y = [100]
-    start_x = [1]
-    start_y = [1]
+    start_x = [0]
+    start_y = [0]
     logger.info("Plotting results for position")
     plt.title(f"Drunken sailor simulation, steps taken {time}")
     plt.xlabel("East/West direction")
