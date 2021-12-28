@@ -24,10 +24,10 @@ def caesar_encryption(message):
     """ Create encrypted char list with numeric values """
     for char in char_list:
         key = get_key(char, alphabet_dict)
-        print("Initial character in message ", key)
+        #print("Initial character in message ", key)
         key += 4
         key = key % (len(alphabet_dict) - 1)
-        print("Encrypted character in message ", key)
+        #print("Encrypted character in message ", key)
         encryption += alphabet_dict[key]
 
     return encryption
@@ -46,18 +46,22 @@ def caesar_decryption(message):
     """ Create decrypted char list with numeric values """
     for char in char_list:
         key = get_key(char, alphabet_dict)
-        print("Initial character in message ", key)
+        #print("Initial character in message ", key)
         key -= 4
         key = key % (len(alphabet_dict) - 1)
-        print("Decrypted character in message ", key)
+        #print("Decrypted character in message ", key)
         decryption += alphabet_dict[key]
         #print(encryption)
 
     return decryption
 
 
-crypted_message = caesar_encryption(input("give message to encrypt:"))
-print(f"\n\n encrypted message is: '{crypted_message}'")
+def main():
+    crypted_message = caesar_encryption(input("give message to encrypt:"))
+    print(f"\n\n encrypted message is: '{crypted_message}'")
 
-decrypted_message = caesar_decryption(input("give message to decrypt:"))
-print(f"\n decrypted message is: '{decrypted_message}'")
+    decrypted_message = caesar_decryption(input("give message to decrypt:"))
+    print(f"\n decrypted message is: '{decrypted_message}'")
+
+if __name__=="__main__":
+    main()
