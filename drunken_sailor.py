@@ -6,7 +6,7 @@ Sailors home is 100 steps East and 100 steps to North from where he starts his j
 Sailor walks his journeys as a random walker, he takes one step the North, East, West or South
 with eqaul probability. When he finds the shore, he can walk straight to home.
 Simulation calculates time to get to the home, 1 step takes 1 second.
-Finally plot path taken with no. steps
+Finally plot path taken with no. steps with start and endpoint marked to the plot.
 """
 
 import matplotlib.pyplot as plt
